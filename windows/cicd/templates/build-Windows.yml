@@ -69,8 +69,6 @@ jobs:
           vsVersion: '15.0'
           msbuildArchitecture: '${{ parameters.Machine }}'
       - script: cd ${{ parameters.workingDirectory }}/${{ parameters.release }} && ls
-      - script: xcopy ${{ parameters.workingDirectory }}/${{ parameters.scheme }}/en.ini ${{ parameters.workingDirectory }}/${{ parameters.release }} /f/y/e
-      - script: xcopy ${{ parameters.workingDirectory }}/${{ parameters.scheme }}/zh-cn.ini ${{ parameters.workingDirectory }}/${{ parameters.release }} /f/y/e
       - task: ArchiveFiles@2
         inputs:
           rootFolderOrFile: ${{ parameters.workingDirectory }}/${{ parameters.release }}
