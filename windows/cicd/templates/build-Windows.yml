@@ -69,7 +69,7 @@ jobs:
           vsVersion: '15.0'
           msbuildArchitecture: '${{ parameters.Machine }}'
       - script: cd ${{ parameters.workingDirectory }}/${{ parameters.release }} && ls
-      - task: ArchiveFiles@1
+      - task: ArchiveFiles@2
         inputs:
           rootFolderOrFile: ${{ parameters.workingDirectory }}/${{ parameters.release }}
           includeRootFolder: true
