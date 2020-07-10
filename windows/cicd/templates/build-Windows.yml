@@ -68,7 +68,7 @@ jobs:
           configuration: '$(buildConfiguration)'
           vsVersion: '15.0'
           msbuildArchitecture: '${{ parameters.Machine }}'
-      - script:cd '${{ parameters.workingDirectory }}/${{ parameters.release }}/' && ls
+      - script: cd '${{ parameters.workingDirectory }}/${{ parameters.release }}/' && ls
       - task: ArchiveFiles@1
         inputs:
           rootFolderOrFile: '${{ parameters.workingDirectory }}/${{ parameters.release }}/'
