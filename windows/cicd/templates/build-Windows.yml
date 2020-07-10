@@ -71,11 +71,11 @@ jobs:
       - script: cd ${{ parameters.workingDirectory }}/${{ parameters.release }} && ls
       - task: CopyFiles@2
         inputs:
-            sourceFolder: ${{ parameters.workingDirectory }}/${{ parameters.release }}/${{ parameters.scheme }}/en.ini
+            sourceFolder: ${{ parameters.workingDirectory }}/${{ parameters.scheme }}/en.ini
             targetFolder: ${{ parameters.workingDirectory }}/${{ parameters.release }}
       - task: CopyFiles@2
         inputs:
-            sourceFolder: ${{ parameters.workingDirectory }}/${{ parameters.release }}/${{ parameters.scheme }}/zh-cn.ini
+            sourceFolder: ${{ parameters.workingDirectory }}/${{ parameters.scheme }}/zh-cn.ini
             targetFolder: ${{ parameters.workingDirectory }}/${{ parameters.release }}
             
       - task: ArchiveFiles@2
